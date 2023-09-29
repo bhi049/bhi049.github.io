@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            background-size: 400% 400%;
+        }
+
+        .animated-button {
+            display: inline-block;
+            position: relative;
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: buttonAnimation 2s infinite alternate;
+        }
+
+        @keyframes buttonAnimation {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .animated-button::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            background-size: 400% 400%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            transform: translateX(-100%);
+        }
+
+        .animated-button:hover::before {
+            opacity: 1;
+            transform: translateX(100%);
+        }
+
+        .animated-button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-text {
+            color: white;
+            font-size: 24px; 
+            margin-top: 20px; 
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <p class="page-text">Tervetuloa verkkosivuilleni</p>
+    
+    <button onclick="siirysivuille()" class="animated-button">
+        <span>Klikkaattaa minua</span>
+    </button>
+</body>
+</html>

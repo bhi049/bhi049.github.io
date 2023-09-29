@@ -1,0 +1,26 @@
+body {
+    background-image: url(ParempiKenttä.jpg);
+}
+.button2 {
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transform: perspective(1px) scale(1.05);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.button2:hover {
+    transform: perspective(1px) scale(1);
+}
+table { 
+    color: black;
+    border-color: black;    
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
