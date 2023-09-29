@@ -16,11 +16,21 @@ body {
 }
 table { 
     color: black;
-    border-color: black;    
+    border-color: black;
+    background-color: wheat;    
 }
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.scoutkuvat {
+    display: flex;
+}
+.scoutkuva img {
+    width: 50px;
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
 }
