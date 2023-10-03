@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
@@ -79,5 +80,35 @@
     <a href="aboutme.html" class="animated-button">
         <span>Klikkaattaa minua</span>       
     </a>
-</body>
+        <input type="checkbox" id="toggle-checkbox">
+        <label for="toggle-checkbox" id="toggle-label">Sivuston tekijä</label>
+        <p class="animated-text">Nikolas Kataja</p>
+        <style>
+            
+            #toggle-checkbox {
+                display: none;
+            }
+    
+            #toggle-label {
+                cursor: pointer;
+                padding: 10px 20px;
+                background-color: darkblue;
+                color: #fff;
+                border-radius: 5px;
+                margin: 20px;
+            }
+    
+            
+            .animated-text {
+                font-size: 20px;
+                transition: font-size 0.5s ease-in-out;
+            }
+    
+            #toggle-checkbox:checked + #toggle-label + .animated-text {
+                font-size: 30px; 
+                color: white; 
+            }
+        </style>
+    </body>
+
 </html>
